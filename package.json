@@ -10,6 +10,7 @@
     "osc-min": "~0.0.9"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "better-assert": "*"
   }
 }
