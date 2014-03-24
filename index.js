@@ -59,6 +59,7 @@ OscReceiver.prototype._onMessage = function(msg, rInfo) {
     el.args.forEach(function(arg, index) {
       args.push(arg.value);
     });
+    self.emit.apply(self, ['message'].concat(args));
     self.emit.apply(self, args);
   });
 
