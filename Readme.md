@@ -1,6 +1,8 @@
 
 # osc-receiver
 
+[![Build Status](https://travis-ci.org/CircuitLab/osc-receiver.svg?branch=master)](https://travis-ci.org/CircuitLab/osc-receiver)
+
 A tiny OSC message receiver.
 
 ## Installation
