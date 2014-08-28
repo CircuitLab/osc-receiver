@@ -45,11 +45,12 @@ describe('osc-receiver', function() {
       });
     });
 
-    it('handles all message', function() {
+    it('handles all message', function(done) {
       receiver.on('message', function() {
         assert('/baz' === arguments[0]);
         assert(1 === arguments[1]);
         assert(2 === arguments[2]);
+        done();
       });
 
       setImmediate(function() {
