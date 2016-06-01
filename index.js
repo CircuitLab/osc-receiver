@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+var debug = require('debug')('osc-receiver');
 var dgram = require('dgram');
 var osc = require('osc-min');
 var EventEmitter = require('events').EventEmitter;
@@ -59,6 +60,7 @@ OscReceiver.prototype._onMessage = function(msg, rInfo) {
     el.args.forEach(function(arg, index) {
       args.push(arg.value);
     });
+    debug('receive %j from %s:%s', args, rInfo.address, rInfo.port);
     self.emit.apply(self, ['message'].concat(args));
     self.emit.apply(self, args);
   });
